@@ -1,0 +1,21 @@
+{
+  "frameUpdateRateHz": 60,
+  "carouselDwellMillis": 4200,
+  "carouselFadeMillis": 900,
+  "carouselEasing": "EASE_IN_OUT_CUBIC",
+  "carouselBezier": [0.4, 0.0, 0.2, 1.0],
+  "progressEasing": "EASE_OUT_EXPO",
+  "progressBezier": [0.16, 1.0, 0.3, 1.0],
+  "textures": [
+    "bassa:textures/ui/loading/frame_0.png",
+    "bassa:textures/ui/loading/frame_1.png",
+    "bassa:textures/ui/loading/frame_2.png",
+    "bassa:textures/ui/background.png"
+  ],
+  "stageText": {
+    "assets": "Loading assets…",
+    "modules": "Registering modules…",
+    "config": "Applying configuration…",
+    "finalize": "Finalizing…"
+  }
+}

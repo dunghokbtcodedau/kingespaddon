@@ -1,0 +1,69 @@
+plugins {
+    id("fabric-loom") version "1.14.10"
+    id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+repositories {
+    maven {
+        name = "Meteor Releases"
+        url = "https://maven.meteordev.org/releases"
+    }
+    maven {
+        name = "Meteor Snapshots"
+        url = "https://maven.meteordev.org/snapshots"
+    }
+}
+
+loom {
+    // Sources are written against Intermediary mappings (e.g. class_310),
+    // which is what the decompiled addon source uses.
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    // The decompiled addon source is written entirely against Intermediary
+    // names (e.g. class_310, method_1551). Fabric Loom requires a "named"
+    // namespace, so we provide a mappings file where "named" == "intermediary".
+    mappings files("gradle/1.21.11-id.jar")
+
+    modImplementation "meteordevelopment:meteor-client:${project.meteor_version}"
+}
+
+processResources {
+    inputs.property "version", project.version
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.release = 21
+}
+
+tasks.withType(AbstractArchiveTask).configureEach {
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}

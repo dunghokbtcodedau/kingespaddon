@@ -1,0 +1,22 @@
+{
+  "required": true,
+  "package": "com.bassa.addon.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "MinecraftClientMixin",
+    "ScreenUiMixin",
+    "HandledScreenAccessor",
+    "TitleScreenMixin",
+    "SplashManagerMixin",
+    "LevelLoadingScreenMixin",
+    "DeathScreenMixin",
+    "MessageScreenMixin",
+    "PopupScreenMixin",
+    "GameModeSwitcherScreenMixin",
+    "FatalErrorScreenMixin",
+    "ClientPlayNetworkHandlerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

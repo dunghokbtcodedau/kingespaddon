@@ -1,0 +1,20 @@
+pluginManagement {
+    repositories {
+        maven {
+            name = "Fabric"
+            url = "https://maven.fabricmc.net/"
+        }
+        maven {
+            name = "Meteor Releases"
+            url = "https://maven.meteordev.org/releases"
+        }
+        maven {
+            name = "Meteor Snapshots"
+            url = "https://maven.meteordev.org/snapshots"
+        }
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "kingdebug-addon"

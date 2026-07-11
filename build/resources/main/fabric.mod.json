@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "kingdebug-addon",
+  "version": "0.1.0",
+  "name": "King Debug",
+  "description": "King Debug — Meteor Client addon.",
+  "authors": [
+    "seasnail"
+  ],
+  "contact": {},
+  "icon": "assets/bassa/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "meteor": [
+      "com.bassa.addon.KingAddon"
+    ]
+  },
+  "mixins": [
+    "bassa-addon.mixins.json"
+  ],
+  "custom": {
+    "meteor-client:color": "170,60,255"
+  },
+  "depends": {
+    "java": ">=21",
+    "minecraft": "1.21.11",
+    "meteor-client": "*"
+  }
+}

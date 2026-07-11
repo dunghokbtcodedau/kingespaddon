@@ -1,0 +1,13 @@
+{
+  "enabledPlugins": {
+    "minecraft-mod-dev@chouzz-plugins": true
+  },
+  "extraKnownMarketplaces": {
+    "chouzz-plugins": {
+      "source": {
+        "source": "directory",
+        "path": "/workspaces/kingespaddon/.claude/marketplaces/chouzz-plugins"
+      }
+    }
+  }
+}
