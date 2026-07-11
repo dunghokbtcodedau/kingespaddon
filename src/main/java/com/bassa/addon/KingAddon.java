@@ -30,7 +30,7 @@ public class KingAddon extends MeteorAddon {
         Modules.get().add(new SpawnerFinder());
         Modules.get().add(new StaffDetector());
         Modules.get().add(new ChunkFinder());
-        Modules.get().add(new LightESP());  // thêm dòng này
+        Modules.get().add(new LightESP());
     }
 
     public void onRegisterCategories() {
