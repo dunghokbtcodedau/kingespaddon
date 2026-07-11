@@ -1,6 +1,6 @@
-package com.nnpg.glazed.modules.esp;
+package com.bassa.addon.modules;
 
-import com.nnpg.glazed.GlazedAddon;
+import com.bassa.addon.KingAddon;
 import meteordevelopment.meteorclient.events.render.Render3DEvent;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.renderer.ShapeMode;
@@ -159,8 +159,8 @@ public class LightESP extends Module {
     private int ticksSinceScan = 0;
 
     public LightESP() {
-        super(GlazedAddon.esp, "light-esp", "Phát hiện nguồn sáng kể cả tầng âm Y<0");
-    }
+        super(KingAddon.CATEGORY, "light-esp", "Phát hiện nguồn sáng kể cả tầng âm Y<0");
+    }   
 
     @Override
     public void onActivate() {
