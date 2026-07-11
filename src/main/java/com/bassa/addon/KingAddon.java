@@ -3,6 +3,7 @@ package com.bassa.addon;
 import com.bassa.addon.modules.AmethystClusterEsp;
 import com.bassa.addon.modules.ChunkFinder;
 import com.bassa.addon.modules.ChunkReloader;
+import com.bassa.addon.modules.LightESP;
 import com.bassa.addon.modules.SpawnerFinder;
 import com.bassa.addon.modules.SpawnerTags;
 import com.bassa.addon.modules.StaffDetector;
@@ -29,6 +30,7 @@ public class KingAddon extends MeteorAddon {
         Modules.get().add(new SpawnerFinder());
         Modules.get().add(new StaffDetector());
         Modules.get().add(new ChunkFinder());
+        Modules.get().add(new LightESP());  // thêm dòng này
     }
 
     public void onRegisterCategories() {
